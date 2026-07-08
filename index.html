@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Lucas — Thumbnail Designer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo"><img src="img/logo.png" alt="jLs logo" /></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#feedback" class="mobile-link">Feedback</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <img src="img/logo.png" class="hero-bg-logo" alt="" />
+    <div class="hero-content">
+      <p class="hero-tag reveal-up">Thumbnail Design</p>
+      <h1 class="hero-title reveal-up">
+        <span>João</span><br/>
+        <span class="outline">Lucas</span> <span>"jLs"</span>
+      </h1>
+      <p class="hero-sub reveal-up">I turn ideas into thumbnails that <strong>stop the scroll</strong> and explode your clicks.</p>
+      <div class="hero-actions reveal-up">
+        <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
+        <a href="https://x.com/jlsgraphic?s=11" target="_blank" rel="noopener" class="btn-x" aria-label="X profile">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.3 1.6h3.4L14.5 10l8.5 11.4h-7.1L10.3 14 5.2 21.4H1.8l7.9-9-8.4-10.8h7.3l4.5 6zm-1.2 17.8h1.9L7.1 3.9H5.1z"/></svg>
+          
+        </a>
+      </div>
+    </div>
+    <div class="hero-marquee">
+      <div class="marquee-row marquee-row--left">
+        <div class="marquee-track">
+          <img src="img/carrossel/UH OH.png" alt="UH OH thumbnail" />
+          <img src="img/carrossel/ranking matthew.png" alt="Ranking Matthew thumbnail" />
+          <img src="img/carrossel/travel wc.png" alt="Travel World Cup thumbnail" />
+          <img src="img/carrossel/ryan and ray.png" alt="Ryan and Ray thumbnail" />
+          <img src="img/carrossel/TIMER.png" alt="Timer thumbnail" />
+          <img src="img/carrossel/NFL TRIVIA.png" alt="NFL Trivia thumbnail" />
+          <img src="img/carrossel/alien.png" alt="Alien thumbnail" />
+          <img src="img/carrossel/UH OH.png" alt="UH OH thumbnail" />
+          <img src="img/carrossel/ranking matthew.png" alt="Ranking Matthew thumbnail" />
+          <img src="img/carrossel/travel wc.png" alt="Travel World Cup thumbnail" />
+          <img src="img/carrossel/ryan and ray.png" alt="Ryan and Ray thumbnail" />
+          <img src="img/carrossel/TIMER.png" alt="Timer thumbnail" />
+          <img src="img/carrossel/NFL TRIVIA.png" alt="NFL Trivia thumbnail" />
+          <img src="img/carrossel/alien.png" alt="Alien thumbnail" />
+        </div>
+      </div>
+      <div class="marquee-row marquee-row--right">
+        <div class="marquee-track">
+          <img src="img/carrossel/claude (1).png" alt="Claude AI thumbnail" />
+          <img src="img/carrossel/apple.png" alt="Apple thumbnail" />
+          <img src="img/carrossel/god of war (1).png" alt="God of War thumbnail" />
+          <img src="img/carrossel/best players.jpg (1).jpeg" alt="Best Players thumbnail" />
+          <img src="img/carrossel/jeoparty post B.png" alt="Jeoparty thumbnail" />
+          <img src="img/carrossel/ancelotti.png" alt="Ancelotti thumbnail" />
+          <img src="img/carrossel/skiii (1).png" alt="Skiii thumbnail" />
+          <img src="img/carrossel/rebuild chet giannis.png" alt="Rebuild Chet Giannis thumbnail" />
+          <img src="img/carrossel/claude (1).png" alt="Claude AI thumbnail" />
+          <img src="img/carrossel/apple.png" alt="Apple thumbnail" />
+          <img src="img/carrossel/god of war (1).png" alt="God of War thumbnail" />
+          <img src="img/carrossel/best players.jpg (1).jpeg" alt="Best Players thumbnail" />
+          <img src="img/carrossel/jeoparty post B.png" alt="Jeoparty thumbnail" />
+          <img src="img/carrossel/ancelotti.png" alt="Ancelotti thumbnail" />
+          <img src="img/carrossel/skiii (1).png" alt="Skiii thumbnail" />
+          <img src="img/carrossel/rebuild chet giannis.png" alt="Rebuild Chet Giannis thumbnail" />
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-img-wrap reveal-left">
+        <div class="about-img-frame">
+          <img src="img/joao-sobre.png" alt="João Lucas designer" />
+          <div class="about-badge">
+            <span>🔥</span> Thumbnail Designer
+          </div>
+        </div>
+        <div class="about-deco-ring"></div>
+      </div>
+      <div class="about-text reveal-right">
+        <p class="section-label">// About Me</p>
+        <h2 class="section-title">Design that <span class="accent">converts</span></h2>
+        <p>My name is João Lucas Santana, I am 23 years old, from Brazil, and I work as a thumbnail designer while pursuing a degree in Advertising.</p>
+        <p>My journey in design began in 2021, when I started looking for a way to make money online. Since childhood, I have always been connected to art, but my first contact with the world of thumbnails came when I tried to create my own YouTube channel. The channel did not work out, but during that process I discovered Photoshop and found my true field of work.</p>
+        <p>Over time, I became a professional graphic designer and specialized in creating strategic and visually impactful thumbnails focused on increasing my clients' video CTR.</p>
+        <p>Today, I understand that the thumbnail is the viewer's first contact with a video. In a feed full of content, standing out visually is essential. That is why I aim to combine strategy and aesthetics, delivering eye-catching designs that generate real results and strengthen each channel's visual identity.</p>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS / CAROUSEL -->
+  <section class="projects" id="projects">
+    <div class="projects-header">
+      <p class="section-label reveal-up">// Projects</p>
+      <h2 class="section-title reveal-up">Featured <span class="accent">work</span></h2>
+      <p class="section-sub reveal-up">Drag or use the arrows to browse</p>
+    </div>
+
+    <div class="projects-filters reveal-up" id="projectsFilters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="sports">Sports Games</button>
+      <button class="filter-btn" data-filter="documentario">Documentário</button>
+      <button class="filter-btn" data-filter="irl">IRL Thumbnails</button>
+    </div>
+
+    <div class="carousel-wrap">
+      <button class="carousel-arrow left" id="arrowLeft" aria-label="previous">&#8592;</button>
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carouselTrack">
+
+          <div class="thumb-card" data-category="sports">
+            <div class="thumb-img-wrap">
+              <img src="img/rbt browns.png" alt="Browns Sports Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="sports">
+            <div class="thumb-img-wrap">
+              <img src="img/nba trades.png" alt="NBA Trades Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="sports">
+            <div class="thumb-img-wrap">
+              <img src="img/world cup jay 2.png" alt="World Cup Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="sports">
+            <div class="thumb-img-wrap">
+              <img src="img/version 222.png" alt="Sports Game Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="sports">
+            <div class="thumb-img-wrap">
+              <img src="img/draft picks B.png" alt="Draft Picks Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="sports">
+            <div class="thumb-img-wrap">
+              <img src="img/stage 2.png" alt="Stage 2 Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="sports">
+            <div class="thumb-img-wrap">
+              <img src="img/raiders 2026.png" alt="Raiders 2026 Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="sports">
+            <div class="thumb-img-wrap">
+              <img src="img/o1 red.png" alt="Sports Game Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="sports">
+            <div class="thumb-img-wrap">
+              <img src="img/99 OVR LEGENDS.png" alt="99 OVR Legends Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="documentario">
+            <div class="thumb-img-wrap">
+              <img src="img/documentario-apple.png" alt="Apple Documentary Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="documentario">
+            <div class="thumb-img-wrap">
+              <img src="img/ancelotti.png" alt="Ancelotti Documentary Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="irl">
+            <div class="thumb-img-wrap">
+              <img src="img/money.png" alt="Money IRL Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="irl">
+            <div class="thumb-img-wrap">
+              <img src="img/travel wc.png" alt="Travel World Cup IRL Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="irl">
+            <div class="thumb-img-wrap">
+              <img src="img/ryan and ray.png" alt="Ryan and Ray IRL Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="irl">
+            <div class="thumb-img-wrap">
+              <img src="img/irl-world cup.png" alt="World Cup IRL Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="irl">
+            <div class="thumb-img-wrap">
+              <img src="img/jeoparty post B.png" alt="Jeoparty IRL Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="irl">
+            <div class="thumb-img-wrap">
+              <img src="img/irl-skiii.png" alt="Skiii IRL Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- PLACEHOLDER CARD -->
+          <div class="thumb-card thumb-card--placeholder" data-category="all">
+            <div class="thumb-img-wrap placeholder-wrap">
+              <div class="placeholder-inner">
+                <span class="plus-icon">+</span>
+                <p>Coming soon</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="carousel-arrow right" id="arrowRight" aria-label="next">&#8594;</button>
+    </div>
+
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="process-inner">
+      <p class="section-label reveal-up">// Process</p>
+      <h2 class="section-title reveal-up">How I <span class="accent">work</span></h2>
+      <div class="process-steps">
+        <div class="process-step reveal-up">
+          <div class="step-num">01</div>
+          <h3>Briefing</h3>
+          <p>I understand the video, the target audience, the channel and the CTR goal.</p>
+        </div>
+        <div class="process-line"></div>
+        <div class="process-step reveal-up">
+          <div class="step-num">02</div>
+          <h3>Concept</h3>
+          <p>I develop the visual idea: composition, expression, color and hierarchy.</p>
+        </div>
+        <div class="process-line"></div>
+        <div class="process-step reveal-up">
+          <div class="step-num">03</div>
+          <h3>Execution</h3>
+          <p>Delivered in high resolution with revisions included within the agreed deadline.</p>
+        </div>
+        <div class="process-line"></div>
+        <div class="process-step reveal-up">
+          <div class="step-num">04</div>
+          <h3>Delivery</h3>
+          <p>Final file optimized for YouTube in multiple formats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section class="feedback" id="feedback">
+    <div class="feedback-inner">
+      <p class="section-label reveal-up">// Feedback</p>
+      <h2 class="section-title reveal-up">What <span class="accent">clients</span> say</h2>
+      <p class="section-sub reveal-up">Testimonials from those who have worked with me</p>
+
+      <div class="feedback-grid feedback-grid--single" id="feedbackTrack">
+        <div class="feedback-card feedback-card--featured reveal-up">
+          <div class="feedback-stars">★★★★★</div>
+          <p class="feedback-text">"João has been an outstanding graphic designer to work with on my YouTube content, consistently delivering polished, eye-catching visuals that elevate every video idea I give him. He has a sharp eye for design trends and translates ideas into clean, professional graphics quickly, whether it's thumbnails, sport graphics, and template designs. Beyond his technical skill, he's reliable, communicative, and easy to collaborate with, always open to feedback and quick to iterate until the final product is exactly right. I'd recommend him without hesitation to any creator or brand looking for a designer who combines creativity with consistency."</p>
+          <div class="feedback-author feedback-author--with-icon">
+            <img src="img/matthew-geist.jpg" alt="Matthew Geist" class="feedback-icon">
+            <div class="feedback-author-text">
+              <span class="feedback-name">Matthew Geist</span>
+              <span class="feedback-role">Sixringofsteel · SROS · Matthew Geist</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feedback-card feedback-card--featured reveal-up">
+          <div class="feedback-stars">★★★★★</div>
+          <p class="feedback-text">"His work is always great, quick, and converts to more views! If anything needs tweaked it gets handled instantly!"</p>
+          <div class="feedback-author feedback-author--with-icon">
+            <img src="img/frdi-show.jpg" alt="The FRDi Show" class="feedback-icon">
+            <div class="feedback-author-text">
+              <span class="feedback-name">Cakes Mitchell</span>
+              <span class="feedback-role">The FRDi Show</span>
+            </div>
+          </div>
+        </div>
+        <div class="feedback-card feedback-card--featured reveal-up">
+          <div class="feedback-stars">★★★★★</div>
+          <p class="feedback-text">"JLS has great creativity and doesn't mind working and adjusting the project until I'm satisfied and get exactly what I'm looking for."</p>
+          <div class="feedback-author feedback-author--with-icon">
+            <img src="img/bengal.jpg" alt="Bengal" class="feedback-icon">
+            <div class="feedback-author-text">
+              <span class="feedback-name">Bengal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback-nav">
+        <button class="feedback-nav-btn" id="feedbackPrevBtn" aria-label="previous feedback">&#8592;</button>
+        <button class="feedback-nav-btn feedback-nav-btn--next" id="feedbackNextBtn">Next feedback &#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <p class="section-label reveal-up">// Contact</p>
+      <h2 class="section-title reveal-up">Let's create something <span class="accent">amazing</span>?</h2>
+      <p class="contact-sub reveal-up">Click below and tell me about your project. I reply within 24h.</p>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0XiNxnLu0T2ArKOLkzTlrlHQIcAWHYAc4h9HekZBTq0e0Nw/viewform?usp=send_form" target="_blank" rel="noopener" class="btn-primary btn-full contact-forms-btn reveal-up">Fill Out The Form 🚀</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><img src="img/logo.png" alt="jLs logo" /></div>
+      <p class="footer-copy">© 2025 Mateus Simôes. All rights reserved.</p>
+      <p class="footer-credit">Made by <strong>Mateus Simões</strong></p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== Navbar scroll state =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ===== Mobile menu =====
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // ===== Scroll reveal =====
+    const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ===== Feedback carousel nav =====
+    const feedbackTrack = document.getElementById('feedbackTrack');
+    const feedbackNextBtn = document.getElementById('feedbackNextBtn');
+    const feedbackPrevBtn = document.getElementById('feedbackPrevBtn');
+
+    if (feedbackTrack && feedbackNextBtn && feedbackPrevBtn) {
+      const getFeedbackStep = () => {
+        const card = feedbackTrack.querySelector('.feedback-card--featured');
+        if (!card) return 0;
+        const gap = parseFloat(getComputedStyle(feedbackTrack).gap) || 0;
+        return card.getBoundingClientRect().width + gap;
+      };
+
+      feedbackNextBtn.addEventListener('click', () => {
+        const step = getFeedbackStep();
+        const maxScroll = feedbackTrack.scrollWidth - feedbackTrack.clientWidth;
+        if (feedbackTrack.scrollLeft >= maxScroll - 5) {
+          feedbackTrack.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          feedbackTrack.scrollBy({ left: step, behavior: 'smooth' });
+        }
+      });
+
+      feedbackPrevBtn.addEventListener('click', () => {
+        const step = getFeedbackStep();
+        if (feedbackTrack.scrollLeft <= 5) {
+          feedbackTrack.scrollTo({ left: feedbackTrack.scrollWidth, behavior: 'smooth' });
+        } else {
+          feedbackTrack.scrollBy({ left: -step, behavior: 'smooth' });
+        }
+      });
+    }
+
+    // ===== Carousel with category filters =====
+    const track = document.getElementById('carouselTrack');
+    const allCards = Array.from(track.querySelectorAll('.thumb-card'));
+    const dotsWrap = document.getElementById('carouselDots');
+    const arrowLeft = document.getElementById('arrowLeft');
+    const arrowRight = document.getElementById('arrowRight');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    let cards = allCards;
+    let cardsPerView = getCardsPerView();
+    let index = 0;
+
+    function getCardsPerView() {
+      const w = window.innerWidth;
+      if (w <= 768) return 1;
+      if (w <= 1024) return 2;
+      return 3;
+    }
+
+    function maxIndex() {
+      return Math.max(0, cards.length - cardsPerView);
+    }
+
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      const total = maxIndex() + 1;
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('carousel-dot');
+        if (i === index) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          index = i;
+          update();
+        });
+        dotsWrap.appendChild(dot);
+      }
+    }
+
+    function update() {
+      if (!cards.length) {
+        track.style.transform = 'translateX(0px)';
+        return;
+      }
+      const cardWidth = cards[0].getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+      const offset = (cardWidth + gap) * index;
+      track.style.transform = `translateX(-${offset}px)`;
+      document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === index);
+      });
+    }
+
+    function applyFilter(filter) {
+      allCards.forEach(card => {
+        const cat = card.dataset.category;
+        const show = filter === 'all' || cat === filter || cat === 'all';
+        card.style.display = show ? '' : 'none';
+      });
+      cards = allCards.filter(card => card.style.display !== 'none');
+      index = 0;
+      cardsPerView = getCardsPerView();
+      buildDots();
+      update();
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilter(btn.dataset.filter);
+      });
+    });
+
+    arrowRight.addEventListener('click', () => {
+      index = index < maxIndex() ? index + 1 : 0;
+      update();
+    });
+    arrowLeft.addEventListener('click', () => {
+      index = index > 0 ? index - 1 : maxIndex();
+      update();
+    });
+
+    window.addEventListener('resize', () => {
+      cardsPerView = getCardsPerView();
+      index = Math.min(index, maxIndex());
+      buildDots();
+      update();
+    });
+
+    buildDots();
+    update();
+
+    // ===== Drag to scroll carousel =====
+    let isDown = false, startX = 0, startTransform = 0;
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.clientX;
+      track.style.transition = 'none';
+      const matrix = new DOMMatrix(getComputedStyle(track).transform);
+      startTransform = matrix.m41;
+    });
+    window.addEventListener('mouseup', (e) => {
+      if (!isDown) return;
+      isDown = false;
+      track.style.transition = '';
+      const diff = e.clientX - startX;
+      if (diff > 60 && index > 0) index--;
+      else if (diff < -60 && index < maxIndex()) index++;
+      update();
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      const diff = e.clientX - startX;
+      track.style.transform = `translateX(${startTransform + diff}px)`;
+    });
+  </script>
+</body>
+</html>
