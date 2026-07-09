@@ -366,6 +366,12 @@
     </div>
   </footer>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="close">&times;</button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
   <script>
     // ===== Navbar scroll state =====
     const navbar = document.getElementById('navbar');
@@ -398,6 +404,35 @@
       });
     }, { threshold: 0.15 });
     revealEls.forEach(el => revealObserver.observe(el));
+
+    // ===== Lightbox for project images =====
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || '';
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      lightboxImg.src = '';
+    }
+
+    document.querySelectorAll('.thumb-card:not(.thumb-card--placeholder) .thumb-img-wrap img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.currentSrc || img.src, img.alt));
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
 
     // ===== Feedback carousel nav =====
     const feedbackTrack = document.getElementById('feedbackTrack');
