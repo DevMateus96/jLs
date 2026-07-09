@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -19,7 +19,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#feedback">Feedback</a></li>
     </ul>
-    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire me</button>
     <button class="hamburger" id="hamburger" aria-label="menu">
       <span></span><span></span><span></span>
     </button>
@@ -39,15 +39,15 @@
   <section class="hero" id="hero">
     <img src="img/logo.png" class="hero-bg-logo" alt="" />
     <div class="hero-content">
-      <p class="hero-tag reveal-up">Thumbnail Design</p>
+      <p class="hero-tag reveal-up">Thumbnail design</p>
       <h1 class="hero-title reveal-up">
         <span>João</span><br/>
         <span class="outline">Lucas</span> <span>"jLs"</span>
       </h1>
       <p class="hero-sub reveal-up">I turn ideas into thumbnails that <strong>stop the scroll</strong> and explode your clicks.</p>
       <div class="hero-actions reveal-up">
-        <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
-        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
+        <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View projects</button>
+        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in touch</button>
         <a href="https://x.com/jlsgraphic?s=11" target="_blank" rel="noopener" class="btn-x" aria-label="X profile">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.3 1.6h3.4L14.5 10l8.5 11.4h-7.1L10.3 14 5.2 21.4H1.8l7.9-9-8.4-10.8h7.3l4.5 6zm-1.2 17.8h1.9L7.1 3.9H5.1z"/></svg>
           
@@ -94,10 +94,6 @@
         </div>
       </div>
     </div>
-    <div class="scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
   </section>
 
   <!-- ABOUT -->
@@ -107,13 +103,13 @@
         <div class="about-img-frame">
           <img src="img/joao-sobre.png" alt="João Lucas designer" />
           <div class="about-badge">
-            <span>🔥</span> Thumbnail Designer
+            <span>🔥</span> Thumbnail designer
           </div>
         </div>
         <div class="about-deco-ring"></div>
       </div>
       <div class="about-text reveal-right">
-        <p class="section-label">// About Me</p>
+        <p class="section-label">// About me</p>
         <h2 class="section-title">Design that <span class="accent">converts</span></h2>
         <p>My name is João Lucas Santana, I am 23 years old, from Brazil, and I work as a thumbnail designer while pursuing a degree in Advertising.</p>
         <p>My journey in design began in 2021, when I started looking for a way to make money online. Since childhood, I have always been connected to art, but my first contact with the world of thumbnails came when I tried to create my own YouTube channel. The channel did not work out, but during that process I discovered Photoshop and found my true field of work.</p>
@@ -133,10 +129,9 @@
     </div>
 
     <div class="projects-filters reveal-up" id="projectsFilters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="sports">Sports Games</button>
+      <button class="filter-btn active" data-filter="irl">IRL thumbnails</button>
+      <button class="filter-btn" data-filter="sports">Sports games</button>
       <button class="filter-btn" data-filter="documentary">Documentary</button>
-      <button class="filter-btn" data-filter="irl">IRL Thumbnails</button>
     </div>
 
     <div class="carousel-wrap">
@@ -353,7 +348,7 @@
       <h2 class="section-title reveal-up">Let's create something <span class="accent">amazing</span>?</h2>
       <p class="contact-sub reveal-up">Click below and tell me about your project. I reply within 24h.</p>
 
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0XiNxnLu0T2ArKOLkzTlrlHQIcAWHYAc4h9HekZBTq0e0Nw/viewform?usp=send_form" target="_blank" rel="noopener" class="btn-primary btn-full contact-forms-btn reveal-up">Fill Out The Form 🚀</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0XiNxnLu0T2ArKOLkzTlrlHQIcAWHYAc4h9HekZBTq0e0Nw/viewform?usp=send_form" target="_blank" rel="noopener" class="btn-primary btn-full contact-forms-btn reveal-up">Fill out the form 🚀</a>
     </div>
   </section>
 
@@ -558,6 +553,7 @@
 
     buildDots();
     update();
+    applyFilter('irl');
 
     // ===== Drag to scroll carousel =====
     let isDown = false, startX = 0, startTransform = 0;
