@@ -52,7 +52,7 @@
     <div class="hero-marquee">
       <div class="marquee-row marquee-row--left">
         <div class="marquee-track">
-           <img src="img/carrossel/butter.png" alt="Butter thumbnail" />
+          <img src="img/carrossel/butter.png" alt="Butter thumbnail" />   
           <img src="img/carrossel/UH OH.png" alt="UH OH thumbnail" />
           <img src="img/carrossel/ranking matthew.png" alt="Ranking Matthew thumbnail" />
           <img src="img/carrossel/travel wc.png" alt="Travel World Cup thumbnail" />
@@ -201,7 +201,7 @@
             </div>
           </div>
 
-          <div class="thumb-card" data-category="irl">
+           <div class="thumb-card" data-category="irl">
             <div class="thumb-img-wrap">
               <img src="img/butter.png" alt="Butter IRL Thumbnail" loading="lazy" />
             </div>
@@ -440,9 +440,7 @@
       lightboxImg.src = '';
     }
 
-    document.querySelectorAll('.thumb-card:not(.thumb-card--placeholder) .thumb-img-wrap img').forEach(img => {
-      img.addEventListener('click', () => openLightbox(img.currentSrc || img.src, img.alt));
-    });
+    // Note: opening happens via the carousel's onTap handler above (pointer-capture safe)
 
     lightboxClose.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', (e) => {
@@ -453,7 +451,7 @@
     });
 
     // ===== Reusable carousel engine (shared by projects & feedback) =====
-    function createCarousel({ trackEl, dotsEl, arrowLeftEl, arrowRightEl, cardSelector, filterable = false, breakpoints = { mobile: 1, tablet: 2, desktop: 3 } }) {
+    function createCarousel({ trackEl, dotsEl, arrowLeftEl, arrowRightEl, cardSelector, filterable = false, breakpoints = { mobile: 1, tablet: 2, desktop: 3 }, onTap = null }) {
       const allCards = Array.from(trackEl.querySelectorAll(cardSelector));
       let cards = allCards;
       let index = 0;
@@ -567,13 +565,10 @@
         else if (diff < -threshold && index < maxIndex()) index++;
         update();
 
-        // Tap (barely any movement) on an expandable feedback text -> toggle it
+        // Tap (barely any movement) -> let the caller handle it (open lightbox, expand text, etc.)
         const moved = Math.hypot(diff, diffY);
-        if (moved < 8 && downTarget) {
-          const textEl = downTarget.closest && downTarget.closest('.feedback-text');
-          if (textEl && (textEl.classList.contains('has-more') || textEl.classList.contains('expanded'))) {
-            textEl.classList.toggle('expanded');
-          }
+        if (moved < 8 && downTarget && onTap) {
+          onTap(downTarget);
         }
         downTarget = null;
       }
@@ -599,7 +594,12 @@
       arrowLeftEl: document.getElementById('arrowLeft'),
       arrowRightEl: document.getElementById('arrowRight'),
       cardSelector: '.thumb-card',
-      filterable: true
+      filterable: true,
+      onTap: (target) => {
+        if (target && target.tagName === 'IMG' && target.closest('.thumb-img-wrap')) {
+          openLightbox(target.currentSrc || target.src, target.alt);
+        }
+      }
     });
 
     document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -618,6 +618,12 @@
       arrowLeftEl: document.getElementById('feedbackArrowLeft'),
       arrowRightEl: document.getElementById('feedbackArrowRight'),
       cardSelector: '.feedback-card--featured',
+      onTap: (target) => {
+        const textEl = target.closest && target.closest('.feedback-text');
+        if (textEl && (textEl.classList.contains('has-more') || textEl.classList.contains('expanded'))) {
+          textEl.classList.toggle('expanded');
+        }
+      },
       breakpoints: { mobile: 1, tablet: 1, desktop: 2 }
     });
 
