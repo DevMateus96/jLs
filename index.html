@@ -39,12 +39,7 @@
   <section class="hero" id="hero">
     <img src="img/logo.png" class="hero-bg-logo" alt="" />
     <div class="hero-content">
-      <p class="hero-tag reveal-up">Thumbnail design</p>
-      <h1 class="hero-title reveal-up">
-        <span>João</span><br/>
-        <span class="outline">Lucas</span> <span>"jLs"</span>
-      </h1>
-      <p class="hero-sub reveal-up">I turn ideas into thumbnails that <strong>stop the scroll</strong> and explode your clicks.</p>
+      <p class="hero-highlight reveal-up">Working as Thumbnail Designer to help you improve your videos views!</p>
       <div class="hero-actions reveal-up">
         <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View projects</button>
         <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in touch</button>
@@ -57,6 +52,7 @@
     <div class="hero-marquee">
       <div class="marquee-row marquee-row--left">
         <div class="marquee-track">
+           <img src="img/carrossel/butter.png" alt="Butter thumbnail" />
           <img src="img/carrossel/UH OH.png" alt="UH OH thumbnail" />
           <img src="img/carrossel/ranking matthew.png" alt="Ranking Matthew thumbnail" />
           <img src="img/carrossel/travel wc.png" alt="Travel World Cup thumbnail" />
@@ -103,7 +99,7 @@
         <div class="about-img-frame">
           <img src="img/joao-sobre.png" alt="João Lucas designer" />
           <div class="about-badge">
-            <span>🔥</span> Thumbnail designer
+            <span>🔥</span> Thumbnail Strategist
           </div>
         </div>
         <div class="about-deco-ring"></div>
@@ -131,7 +127,7 @@
     <div class="projects-filters reveal-up" id="projectsFilters">
       <button class="filter-btn active" data-filter="irl">IRL thumbnails</button>
       <button class="filter-btn" data-filter="sports">Sports games</button>
-      <button class="filter-btn" data-filter="documentary">Documentary</button>
+      <button class="filter-btn" data-filter="documentary">Documentário</button>
     </div>
 
     <div class="carousel-wrap">
@@ -202,6 +198,12 @@
           <div class="thumb-card" data-category="documentary">
             <div class="thumb-img-wrap">
               <img src="img/ancelotti.png" alt="Ancelotti Documentary Thumbnail" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="thumb-card" data-category="irl">
+            <div class="thumb-img-wrap">
+              <img src="img/butter.png" alt="Butter IRL Thumbnail" loading="lazy" />
             </div>
           </div>
 
@@ -305,45 +307,60 @@
       <h2 class="section-title reveal-up">What <span class="accent">clients</span> say</h2>
       <p class="section-sub reveal-up">Testimonials from those who have worked with me</p>
 
-      <div class="feedback-grid feedback-grid--single" id="feedbackTrack">
-        <div class="feedback-card feedback-card--featured reveal-up">
-          <div class="feedback-stars">★★★★★</div>
-          <p class="feedback-text">"João has been an outstanding graphic designer to work with on my YouTube content, consistently delivering polished, eye-catching visuals that elevate every video idea I give him. He has a sharp eye for design trends and translates ideas into clean, professional graphics quickly, whether it's thumbnails, sport graphics, and template designs. Beyond his technical skill, he's reliable, communicative, and easy to collaborate with, always open to feedback and quick to iterate until the final product is exactly right. I'd recommend him without hesitation to any creator or brand looking for a designer who combines creativity with consistency."</p>
-          <div class="feedback-author feedback-author--with-icon">
-            <img src="img/matthew-geist.jpg" alt="Matthew Geist" class="feedback-icon">
-            <div class="feedback-author-text">
-              <span class="feedback-name">Matthew Geist</span>
-              <span class="feedback-role">Sixringofsteel · SROS · Matthew Geist</span>
-            </div>
-          </div>
-        </div>
+      <div class="carousel-wrap feedback-carousel-wrap">
+        <button class="carousel-arrow left" id="feedbackArrowLeft" aria-label="previous feedback">&#8592;</button>
+        <div class="carousel" id="feedbackCarousel">
+          <div class="carousel-track feedback-track" id="feedbackTrack">
 
-        <div class="feedback-card feedback-card--featured reveal-up">
-          <div class="feedback-stars">★★★★★</div>
-          <p class="feedback-text">"His work is always great, quick, and converts to more views! If anything needs tweaked it gets handled instantly!"</p>
-          <div class="feedback-author feedback-author--with-icon">
-            <img src="img/frdi-show.jpg" alt="The FRDi Show" class="feedback-icon">
-            <div class="feedback-author-text">
-              <span class="feedback-name">Cakes Mitchell</span>
-              <span class="feedback-role">The FRDi Show</span>
+            <div class="feedback-card feedback-card--featured">
+              <div class="feedback-stars">★★★★★</div>
+              <p class="feedback-text">"João has been an outstanding graphic designer to work with on my YouTube content, consistently delivering polished, eye-catching visuals that elevate every video idea I give him. He has a sharp eye for design trends and translates ideas into clean, professional graphics quickly, whether it's thumbnails, sport graphics, and template designs. Beyond his technical skill, he's reliable, communicative, and easy to collaborate with, always open to feedback and quick to iterate until the final product is exactly right. I'd recommend him without hesitation to any creator or brand looking for a designer who combines creativity with consistency."</p>
+              <div class="feedback-author feedback-author--with-icon">
+                <img src="img/matthew-geist.jpg" alt="Matthew Geist" class="feedback-icon">
+                <div class="feedback-author-text">
+                  <span class="feedback-name">Matthew Geist</span>
+                  <span class="feedback-role">Sixringofsteel · SROS · Matthew Geist</span>
+                </div>
+              </div>
             </div>
+
+            <div class="feedback-card feedback-card--featured">
+              <div class="feedback-stars">★★★★★</div>
+              <p class="feedback-text">"His work is always great, quick, and converts to more views! If anything needs tweaked it gets handled instantly!"</p>
+              <div class="feedback-author feedback-author--with-icon">
+                <img src="img/frdi-show.jpg" alt="The FRDi Show" class="feedback-icon">
+                <div class="feedback-author-text">
+                  <span class="feedback-name">Cakes Mitchell</span>
+                  <span class="feedback-role">The FRDi Show</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="feedback-card feedback-card--featured">
+              <div class="feedback-stars">★★★★★</div>
+              <p class="feedback-text">"JLS has great creativity and doesn't mind working and adjusting the project until I'm satisfied and get exactly what I'm looking for."</p>
+              <div class="feedback-author feedback-author--with-icon">
+                <img src="img/bengal.jpg" alt="Bengal" class="feedback-icon">
+                <div class="feedback-author-text">
+                  <span class="feedback-name">Bengal</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="feedback-card feedback-card--featured">
+              <div class="feedback-stars">★★★★★</div>
+              <p class="feedback-text">"Working with JLS has been an awesome experience! He's extremely creative and makes thumbnail planning and execution a breeze, helping take my content to a new level. I really appreciate his timely responses and quick turnaround times."</p>
+              <div class="feedback-author">
+                <span class="feedback-name">Jay Canada</span>
+              </div>
+            </div>
+
           </div>
         </div>
-        <div class="feedback-card feedback-card--featured reveal-up">
-          <div class="feedback-stars">★★★★★</div>
-          <p class="feedback-text">"JLS has great creativity and doesn't mind working and adjusting the project until I'm satisfied and get exactly what I'm looking for."</p>
-          <div class="feedback-author feedback-author--with-icon">
-            <img src="img/bengal.jpg" alt="Bengal" class="feedback-icon">
-            <div class="feedback-author-text">
-              <span class="feedback-name">Bengal</span>
-            </div>
-          </div>
-        </div>
+        <button class="carousel-arrow right" id="feedbackArrowRight" aria-label="next feedback">&#8594;</button>
       </div>
-      <div class="feedback-nav">
-        <button class="feedback-nav-btn" id="feedbackPrevBtn" aria-label="previous feedback">&#8592;</button>
-        <button class="feedback-nav-btn feedback-nav-btn--next" id="feedbackNextBtn">Next feedback &#8594;</button>
-      </div>
+
+      <div class="carousel-dots" id="feedbackDots"></div>
     </div>
   </section>
 
@@ -435,155 +452,187 @@
       if (e.key === 'Escape') closeLightbox();
     });
 
-    // ===== Feedback carousel nav =====
-    const feedbackTrack = document.getElementById('feedbackTrack');
-    const feedbackNextBtn = document.getElementById('feedbackNextBtn');
-    const feedbackPrevBtn = document.getElementById('feedbackPrevBtn');
+    // ===== Reusable carousel engine (shared by projects & feedback) =====
+    function createCarousel({ trackEl, dotsEl, arrowLeftEl, arrowRightEl, cardSelector, filterable = false, breakpoints = { mobile: 1, tablet: 2, desktop: 3 } }) {
+      const allCards = Array.from(trackEl.querySelectorAll(cardSelector));
+      let cards = allCards;
+      let index = 0;
 
-    if (feedbackTrack && feedbackNextBtn && feedbackPrevBtn) {
-      const getFeedbackStep = () => {
-        const card = feedbackTrack.querySelector('.feedback-card--featured');
-        if (!card) return 0;
-        const gap = parseFloat(getComputedStyle(feedbackTrack).gap) || 0;
-        return card.getBoundingClientRect().width + gap;
-      };
+      function getCardsPerView() {
+        const w = window.innerWidth;
+        if (w <= 768) return breakpoints.mobile;
+        if (w <= 1024) return breakpoints.tablet;
+        return breakpoints.desktop;
+      }
+      let cardsPerView = getCardsPerView();
 
-      feedbackNextBtn.addEventListener('click', () => {
-        const step = getFeedbackStep();
-        const maxScroll = feedbackTrack.scrollWidth - feedbackTrack.clientWidth;
-        if (feedbackTrack.scrollLeft >= maxScroll - 5) {
-          feedbackTrack.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          feedbackTrack.scrollBy({ left: step, behavior: 'smooth' });
+      function maxIndex() {
+        return Math.max(0, cards.length - cardsPerView);
+      }
+
+      function buildDots() {
+        if (!dotsEl) return;
+        dotsEl.innerHTML = '';
+        const total = maxIndex() + 1;
+        for (let i = 0; i < total; i++) {
+          const dot = document.createElement('div');
+          dot.classList.add('carousel-dot');
+          if (i === index) dot.classList.add('active');
+          dot.addEventListener('click', () => {
+            index = i;
+            update();
+          });
+          dotsEl.appendChild(dot);
         }
-      });
+      }
 
-      feedbackPrevBtn.addEventListener('click', () => {
-        const step = getFeedbackStep();
-        if (feedbackTrack.scrollLeft <= 5) {
-          feedbackTrack.scrollTo({ left: feedbackTrack.scrollWidth, behavior: 'smooth' });
-        } else {
-          feedbackTrack.scrollBy({ left: -step, behavior: 'smooth' });
+      function update() {
+        if (!cards.length) {
+          trackEl.style.transform = 'translateX(0px)';
+          return;
         }
-      });
-    }
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(trackEl).gap) || 0;
+        const offset = (cardWidth + gap) * index;
+        trackEl.style.transform = `translateX(-${offset}px)`;
+        if (dotsEl) {
+          dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === index);
+          });
+        }
+      }
 
-    // ===== Carousel with category filters =====
-    const track = document.getElementById('carouselTrack');
-    const allCards = Array.from(track.querySelectorAll('.thumb-card'));
-    const dotsWrap = document.getElementById('carouselDots');
-    const arrowLeft = document.getElementById('arrowLeft');
-    const arrowRight = document.getElementById('arrowRight');
-    const filterBtns = document.querySelectorAll('.filter-btn');
+      function applyFilter(filter) {
+        allCards.forEach(card => {
+          const cat = card.dataset.category;
+          const show = filter === 'all' || cat === filter || cat === 'all';
+          card.style.display = show ? '' : 'none';
+        });
+        cards = allCards.filter(card => card.style.display !== 'none');
+        index = 0;
+        cardsPerView = getCardsPerView();
+        buildDots();
+        update();
+      }
 
-    let cards = allCards;
-    let cardsPerView = getCardsPerView();
-    let index = 0;
-
-    function getCardsPerView() {
-      const w = window.innerWidth;
-      if (w <= 768) return 1;
-      if (w <= 1024) return 2;
-      return 3;
-    }
-
-    function maxIndex() {
-      return Math.max(0, cards.length - cardsPerView);
-    }
-
-    function buildDots() {
-      dotsWrap.innerHTML = '';
-      const total = maxIndex() + 1;
-      for (let i = 0; i < total; i++) {
-        const dot = document.createElement('div');
-        dot.classList.add('carousel-dot');
-        if (i === index) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-          index = i;
+      if (arrowRightEl) {
+        arrowRightEl.addEventListener('click', () => {
+          index = index < maxIndex() ? index + 1 : 0;
           update();
         });
-        dotsWrap.appendChild(dot);
       }
-    }
-
-    function update() {
-      if (!cards.length) {
-        track.style.transform = 'translateX(0px)';
-        return;
+      if (arrowLeftEl) {
+        arrowLeftEl.addEventListener('click', () => {
+          index = index > 0 ? index - 1 : maxIndex();
+          update();
+        });
       }
-      const cardWidth = cards[0].getBoundingClientRect().width;
-      const gap = parseFloat(getComputedStyle(track).gap) || 0;
-      const offset = (cardWidth + gap) * index;
-      track.style.transform = `translateX(-${offset}px)`;
-      document.querySelectorAll('.carousel-dot').forEach((d, i) => {
-        d.classList.toggle('active', i === index);
-      });
-    }
 
-    function applyFilter(filter) {
-      allCards.forEach(card => {
-        const cat = card.dataset.category;
-        const show = filter === 'all' || cat === filter || cat === 'all';
-        card.style.display = show ? '' : 'none';
+      window.addEventListener('resize', () => {
+        cardsPerView = getCardsPerView();
+        index = Math.min(index, maxIndex());
+        buildDots();
+        update();
       });
-      cards = allCards.filter(card => card.style.display !== 'none');
-      index = 0;
-      cardsPerView = getCardsPerView();
+
+      // Drag to scroll (mouse, touch & pen via Pointer Events)
+      // Also detects simple taps (no drag) to toggle expandable feedback text,
+      // since pointer capture during drag can prevent native click events from
+      // reaching descendant elements.
+      let isDown = false, startX = 0, startY = 0, startTransform = 0, downTarget = null;
+      trackEl.style.touchAction = 'pan-y';
+
+      trackEl.addEventListener('pointerdown', (e) => {
+        isDown = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        downTarget = e.target;
+        trackEl.style.transition = 'none';
+        trackEl.classList.add('dragging');
+        trackEl.setPointerCapture(e.pointerId);
+        const matrix = new DOMMatrix(getComputedStyle(trackEl).transform);
+        startTransform = matrix.m41;
+      });
+
+      function endDrag(e) {
+        if (!isDown) return;
+        isDown = false;
+        trackEl.style.transition = '';
+        trackEl.classList.remove('dragging');
+        const diff = e.clientX - startX;
+        const diffY = e.clientY - startY;
+        const cardWidth = cards[0] ? cards[0].getBoundingClientRect().width : 0;
+        const threshold = Math.max(40, cardWidth * 0.15);
+        if (diff > threshold && index > 0) index--;
+        else if (diff < -threshold && index < maxIndex()) index++;
+        update();
+
+        // Tap (barely any movement) on an expandable feedback text -> toggle it
+        const moved = Math.hypot(diff, diffY);
+        if (moved < 8 && downTarget) {
+          const textEl = downTarget.closest && downTarget.closest('.feedback-text');
+          if (textEl && (textEl.classList.contains('has-more') || textEl.classList.contains('expanded'))) {
+            textEl.classList.toggle('expanded');
+          }
+        }
+        downTarget = null;
+      }
+      trackEl.addEventListener('pointerup', endDrag);
+      trackEl.addEventListener('pointercancel', endDrag);
+
+      trackEl.addEventListener('pointermove', (e) => {
+        if (!isDown) return;
+        const diff = e.clientX - startX;
+        trackEl.style.transform = `translateX(${startTransform + diff}px)`;
+      });
+
       buildDots();
       update();
+
+      return { applyFilter };
     }
 
-    filterBtns.forEach(btn => {
+    // ===== Projects carousel (with category filters) =====
+    const projectsCarousel = createCarousel({
+      trackEl: document.getElementById('carouselTrack'),
+      dotsEl: document.getElementById('carouselDots'),
+      arrowLeftEl: document.getElementById('arrowLeft'),
+      arrowRightEl: document.getElementById('arrowRight'),
+      cardSelector: '.thumb-card',
+      filterable: true
+    });
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        applyFilter(btn.dataset.filter);
+        projectsCarousel.applyFilter(btn.dataset.filter);
       });
     });
+    projectsCarousel.applyFilter('irl');
 
-    arrowRight.addEventListener('click', () => {
-      index = index < maxIndex() ? index + 1 : 0;
-      update();
-    });
-    arrowLeft.addEventListener('click', () => {
-      index = index > 0 ? index - 1 : maxIndex();
-      update();
-    });
-
-    window.addEventListener('resize', () => {
-      cardsPerView = getCardsPerView();
-      index = Math.min(index, maxIndex());
-      buildDots();
-      update();
+    // ===== Feedback carousel (same sliding behavior as projects, sized for text) =====
+    createCarousel({
+      trackEl: document.getElementById('feedbackTrack'),
+      dotsEl: document.getElementById('feedbackDots'),
+      arrowLeftEl: document.getElementById('feedbackArrowLeft'),
+      arrowRightEl: document.getElementById('feedbackArrowRight'),
+      cardSelector: '.feedback-card--featured',
+      breakpoints: { mobile: 1, tablet: 1, desktop: 2 }
     });
 
-    buildDots();
-    update();
-    applyFilter('irl');
+    // ===== Feedback: mark which testimonials are long enough to expand =====
+    function setupExpandable() {
+      document.querySelectorAll('.feedback-text').forEach(text => {
+        text.classList.remove('expanded');
+        const isOverflowing = text.scrollHeight > text.clientHeight + 2;
+        text.classList.toggle('has-more', isOverflowing);
+      });
+    }
 
-    // ===== Drag to scroll carousel =====
-    let isDown = false, startX = 0, startTransform = 0;
-    track.addEventListener('mousedown', (e) => {
-      isDown = true;
-      startX = e.clientX;
-      track.style.transition = 'none';
-      const matrix = new DOMMatrix(getComputedStyle(track).transform);
-      startTransform = matrix.m41;
-    });
-    window.addEventListener('mouseup', (e) => {
-      if (!isDown) return;
-      isDown = false;
-      track.style.transition = '';
-      const diff = e.clientX - startX;
-      if (diff > 60 && index > 0) index--;
-      else if (diff < -60 && index < maxIndex()) index++;
-      update();
-    });
-    window.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      const diff = e.clientX - startX;
-      track.style.transform = `translateX(${startTransform + diff}px)`;
-    });
+    window.addEventListener('load', setupExpandable);
+    window.addEventListener('resize', setupExpandable);
+    setupExpandable();
   </script>
 </body>
 </html>
